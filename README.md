@@ -1,16 +1,188 @@
-# React + Vite
+# QRForge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Create. Customize. Scan.
 
-Currently, two official plugins are available:
+QRForge is a modern browser-based QR Code Generator and Designer built with React.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+It allows users to generate QR codes for multiple data types, customize their appearance in real time, export them as PNG or SVG, copy their underlying content, and store recently generated QR codes locally.
 
-## React Compiler
+## 🚀 Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Live Demo:** `YOUR_DEPLOYED_URL`
 
-## Expanding the ESLint configuration
+## 📸 Preview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![QRForge Dashboard](screenshots/dashboard.png)
+
+---
+
+## ✨ Features
+
+### QR Code Generation
+
+QRForge supports five QR code types:
+
+- URL
+- Plain Text
+- Email
+- Phone Number
+- Wi-Fi
+
+The QR preview updates automatically whenever the input or QR configuration changes.
+
+### 🎨 QR Customization
+
+Users can customize:
+
+- QR size
+- Foreground color
+- Background color
+- Error correction level
+- Margin / quiet zone
+- Visual presets
+- QR gradients
+- QR patterns
+
+### 🔲 QR Patterns
+
+QRForge supports three visual QR patterns:
+
+- Square
+- Rounded
+- Dots
+
+Finder patterns are preserved when using stylized patterns to maintain QR scanning reliability.
+
+### 🌈 QR Gradients
+
+Users can apply a gradient directly to the QR modules.
+
+Available controls:
+
+- Gradient start color
+- Gradient end color
+
+The gradient is rendered in both the live preview and SVG export.
+
+### 🖼️ Logo Support
+
+Users can add a custom logo to the center of a QR code.
+
+Supported formats:
+
+- PNG
+- JPEG
+- WebP
+
+Logo uploads are limited to 2 MB.
+
+### 📤 Export
+
+QR codes can be exported as:
+
+- PNG
+- SVG
+
+The exported QR reflects the current preview configuration.
+
+### 📋 Copy Content
+
+The generated QR payload can be copied directly to the clipboard.
+
+### ⚠️ Scan Reliability Warnings
+
+QRForge analyzes the current QR configuration and displays warnings when certain settings may reduce scanning reliability.
+
+Warnings can cover:
+
+- Small QR sizes
+- Low foreground/background contrast
+- Low error correction with a logo
+- Stylized QR patterns
+- Low-contrast gradients
+
+### 💾 QR History
+
+Recently downloaded QR codes can be stored locally in the browser.
+
+History supports:
+
+- LocalStorage persistence
+- Up to 20 recent entries
+- History enable/disable control
+- Clear history
+- Restoring saved QR configurations
+- Persistence across page refreshes
+
+### 🌓 Light & Dark Mode
+
+QRForge supports:
+
+- Light mode
+- Dark mode
+
+The selected theme is persisted locally.
+
+### 🌅 Custom Application Background
+
+Users can choose between:
+
+- Classic background
+- Custom gradient background
+
+The gradient supports user-selected start and end colors.
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| React | User interface |
+| Vite | Development and build tooling |
+| JavaScript | Application logic |
+| CSS | Styling and responsive design |
+| React Router | Client-side navigation |
+| QRCode | QR generation |
+| LocalStorage | Local settings and QR history |
+
+---
+
+## 📁 Project Structure
+
+```text
+QRForge/
+│
+├── public/
+│
+├── src/
+│   ├── context/
+│   │   ├── QRContext.jsx
+│   │   └── SettingsContext.jsx
+│   │
+│   ├── pages/
+│   │   ├── Dashboard.jsx
+│   │   ├── Generator.jsx
+│   │   ├── Customize.jsx
+│   │   └── Settings.jsx
+│   │
+│   ├── utils/
+│   │   ├── history.js
+│   │   ├── qrPayload.js
+│   │   └── validation.js
+│   │
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+│
+├── screenshots/
+│   ├── dashboard.png
+│   ├── generator.png
+│   ├── customize.png
+│   └── settings.png
+│
+├── index.html
+├── package.json
+├── package-lock.json
+└── README.md
