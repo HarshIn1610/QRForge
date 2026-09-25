@@ -12,7 +12,8 @@ It allows users to generate QR codes for multiple data types, customize their ap
 
 ## 📸 Preview
 
-![QRForge Dashboard](screenshots/dashboard.png)
+![QRForge Dashboard](Screenshots/Dashboard.png)
+![QRForge Generator](Screenshots/Generator.png)
 
 ---
 
