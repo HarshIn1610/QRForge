@@ -8,7 +8,7 @@ It allows users to generate QR codes for multiple data types, customize their ap
 
 ## 🚀 Live Demo
 
-**Live Demo:** `(https://qr-forge-nu.vercel.app/)`
+**Live Demo:** https://qr-forge-nu.vercel.app/
 
 ## 📸 Preview
 
